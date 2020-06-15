@@ -82,6 +82,10 @@
 <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
 
+    html, body {
+        background-color: #0E0E0E;
+    }
+
     * {
         font-family: IBM Plex Mono
     }
@@ -91,7 +95,6 @@
     }
 
     .stop-scroll {
-        min-height: 100vh;
         min-height: -moz-available;
         min-height: -webkit-fill-available;
     }
