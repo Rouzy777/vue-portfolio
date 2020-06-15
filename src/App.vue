@@ -1,5 +1,5 @@
 <template>
-    <div class='d-flex flex-column bg-black min-vh-100'>
+    <div class='d-flex stop-scroll flex-column bg-black'>
         <transition name='fade'>
             <div v-if='isOpen' class="d-flex min-vh-100 bg-black popup-menu">
                 <div class="m-auto text-center">
@@ -88,6 +88,12 @@
 
     h1 {
         font-size: calc(22.5px + 16 * ((100vw - 320px) / (1280 - 320))) !important;
+    }
+
+    .stop-scroll {
+        min-height: 100vh;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
     }
 
     .bg-black {
