@@ -33,7 +33,7 @@
             </div>
             <div class="col-lg-6 col-12 text-lg-right text-center">
                 <a target="_blank" href="https://github.com/rouzy777">github</a>
-                <a href="" class='ml-3'>telegram</a>
+                <a target="_blank" href="https://t.me/rouzy312" class='ml-3'>telegram</a>
             </div>
         </footer>
     </div>
