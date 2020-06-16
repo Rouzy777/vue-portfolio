@@ -32,6 +32,7 @@
     import techolab from '@/assets/techolab.png'
 
     export default {
+        name: 'Projects',
         data: () => ({
             currItem: 0,
             ready: true,

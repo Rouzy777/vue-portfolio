@@ -17,12 +17,6 @@
     </div>
 </template>
 
-<script>
-export default {
-  name: 'Home'
-}
-</script>
-
 <style media="screen">
     .char-code {
         font-size: 200px;

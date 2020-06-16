@@ -25,8 +25,8 @@
                 <span></span>
             </div>
         </nav>
-        <router-view v-if='!isOpen' class='container'/>
-        <div class='m-auto' v-else><!-- SPACER FOR CORRECT FOOTER VIEW --></div>
+        <router-view :class='{"d-none": isOpen}' class='container'/>
+        <div :class='{"d-none": !isOpen}' class='m-auto'><!-- SPACER FOR CORRECT FOOTER VIEW --></div>
         <footer class='row mx-auto text-muted show-on-popup pb-3 col-12'>
             <div class="col-6 d-lg-block d-none">
                 <a>{{ currentRouteName }}</a>
@@ -41,6 +41,13 @@
 
 <script>
     export default {
+        metaInfo() {
+            let routeName = this.$route.name;
+            return {
+                title: routeName,
+                titleTemplate: '%s - Alexander K.'
+            }
+        },
         data: () => ({
             links: [
                 {
@@ -68,7 +75,7 @@
         }),
         computed: {
             currentRouteName() {
-                return this.$route.name == "Home" ? "aleksandr32al32@gmail.com" : this.$route.name
+                return this.$route.name == "Главная" ? "aleksandr32al32@gmail.com" : this.$route.name
             }
         },
         methods: {
