@@ -18,7 +18,7 @@
                 </div>
             </div>
         </transition>
-        <div class="col-12 us-none order-lg-0 order-2 mt-4">
+        <div class="col-12 py-lg-0 py-2 us-none order-lg-0 order-2 mt-4">
             <button @click='prev' :disabled='currItem === 0' class='text-light cursor-pointer arrow-navigation mr-3'>&larr; </button>
             <span class='text-uppercase'>{{currItem+1}} / {{projects.length}}</span>
             <button @click='next' :disabled='currItem === projects.length-1' class='text-light cursor-pointer arrow-navigation ml-3'> &rarr;</button>
