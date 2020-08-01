@@ -1,5 +1,5 @@
 <template>
-    <div class='d-flex stop-scroll flex-column bg-black'>
+    <vue100vh :css="{ minHeight: '100rvh' }" class="d-flex flex-column bg-black">
         <transition name='fade'>
             <div v-if='isOpen' class="d-flex min-vh-100 bg-black popup-menu">
                 <div class="m-auto text-center">
@@ -36,11 +36,16 @@
                 <a target="_blank" href="https://t.me/rouzy312" class='ml-3'>telegram</a>
             </div>
         </footer>
-    </div>
+    </vue100vh>
 </template>
 
 <script>
+    import vue100vh from 'vue-100vh'
+
     export default {
+        components: {
+            vue100vh
+        },
         metaInfo() {
             let routeName = this.$route.name;
             return {
@@ -99,11 +104,6 @@
 
     h1 {
         font-size: calc(22.5px + 16 * ((100vw - 320px) / (1280 - 320))) !important;
-    }
-
-    .stop-scroll {
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
     }
 
     .bg-black {
